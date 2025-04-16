@@ -1,54 +1,127 @@
-# React + TypeScript + Vite
+# Recipe App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimalistic React + TypeScript application scaffolded with Vite. This project serves as a frontend interface for interacting with the [Recipe API](https://github.com/codingwitharmand/recipe-api), providing users with a seamless experience to browse and manage recipes.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** with **TypeScript** for robust and type-safe UI development.
+- **Vite** for fast and efficient development and build processes.
+- **ESLint** configured with recommended rules for code quality and consistency.
+- Ready for integration with the [Recipe API](https://github.com/codingwitharmand/recipe-api) for full-stack functionality.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/)
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 14 or above)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/codingwitharmand/recipe-app.git
+   cd recipe-app
+   ```
+
+2. **Install dependencies:**
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+3. **Start the development server:**
+
+   Using npm:
+
+   ```bash
+   npm run dev
+   ```
+
+   Or using Yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+   The application will be available at `http://localhost:5173`.
+
+## Available Scripts
+
+- `dev`: Starts the development server with hot module replacement.
+- `build`: Builds the application for production.
+- `preview`: Serves the production build locally.
+- `lint`: Runs ESLint to analyze code for potential issues.
+
+## Project Structure
+
+```
+recipe-app/
+├── public/               # Static assets
+├── src/                  # Source code
+│   ├── components/       # Reusable components
+│   ├── pages/            # Page components
+│   ├── App.tsx           # Root component
+│   └── main.tsx          # Application entry point
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Contributions are welcome! Please follow these steps:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Fork the repository**
+2. **Create a new branch:**
+
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+
+3. **Commit your changes:**
+
+   ```bash
+   git commit -m 'Add YourFeature'
+   ```
+
+4. **Push to the branch:**
+
+   ```bash
+   git push origin feature/YourFeature
+   ```
+
+5. **Open a pull request**
+
+## License
+
+This project is not under the license.
