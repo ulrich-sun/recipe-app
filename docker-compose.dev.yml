@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  front:
+    image: app
+    ports:
+      - "8080:80"
+    environment:
+      - API_URL=https://api.rex-docker.io/api
